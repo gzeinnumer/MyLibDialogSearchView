@@ -56,7 +56,7 @@ dependencies {
 
 ---
 
-**First Step Awal**. Use `MaterialComponents` in your style :
+**First Step**. Use `MaterialComponents` in your style :
 
 ```xml
 <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
@@ -68,7 +68,7 @@ dependencies {
 
 ### SearchViewDialog
 Dialog with **1 Title, 1 Content, 1 EditText, 1 RecyclerView, 1 Negative Button, 1 Positive Button**. You can choise `Single Item Select` or `Multi Item Select`. The difference is only in `callback` function.
-- `Single Item Select`. Use `onOkPressedCallBackSingle` to enable `Multi Select Item`.
+- **Single Item Select**. Use `onOkPressedCallBackSingle` to enable `Multi Select Item`.
 **Code** :
 ```java
 ArrayList<String> list = new ArrayList<>();
@@ -99,7 +99,7 @@ new SearchViewDialog(getSupportFragmentManager(), list)
     .show();
 ```
 
-- `Multi Item Select`. Use `onOkPressedCallBackMulti` to enable `Multi Select Item`.
+- **Multi Item Select**. Use `onOkPressedCallBackMulti` to enable `Multi Select Item`.
 **Code** :
 ```java
 ArrayList<String> list = new ArrayList<>();
