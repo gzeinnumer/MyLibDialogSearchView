@@ -162,9 +162,9 @@ dialog.show();
 | `Single Select Item`                                                                                             | Click `OK` and call function `onOkPressedCallBackSingle`                                                         | Fiture `Filter`                                                                                                  |
 
 
-| <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_7.jpg"/> | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_5.jpg" /> |
-|:-----------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
-| Click `OK` and call function `onOkPressedCallBackMulti`                                                          | `Multi Select Item`                                                                                               |
+| <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_5.jpg" /> | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_7.jpg"/> |
+|:------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
+| `Multi Select Item`                                                                                               | Click `OK` and call function `onOkPressedCallBackMulti`                                                          |
 
 #### SearchViewDialog -> Customize
 
