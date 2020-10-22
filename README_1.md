@@ -102,7 +102,7 @@ You can change UI with this configuration.
 **Look At Orange Arrow.** you can set shape/canvas from `drawable` to `dialog` with `shape.xml`->`<shape></shape>`. in my example i am using `rounded_corner_2.xml`.
 
 <p align="center">
-  <img src="https://github.com/gzeinnumer/MyLibDialog/blob/main/preview/MyLibDialog_4.png" width="500"/>
+  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_16.jpg" width="500"/>
 </p>
 
 **XML** :
@@ -128,16 +128,35 @@ Other Example:
 
 **Code** :
 ```java
-new ConfirmDialog(getSupportFragmentManager())
+new SearchViewDialog(getSupportFragmentManager(), list)
     .setDialogCanvas(getResources().getDrawable(R.drawable.rounded_corner_2))
     ...
     .show();
 ```
 
-##
-
-[FullCode](https://github.com/gzeinnumer/MyLibDialog/blob/main/example/ConfirmDialog/MainActivity.java) **Preview** :
+**Look At Orange Arrow.** You can change `Width` of dialog, with `percentage` of your screen. you can use value from `0.5` - `1.0` (50% - 100%).
 
 <p align="center">
-  <img src="https://github.com/gzeinnumer/MyLibDialog/blob/main/preview/MyLibDialog_5.png" width="500"/>
+  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_18.jpg" width="500"/>
+</p>
+
+**Code** :
+```java
+new SearchViewDialog(getSupportFragmentManager(), list)
+    .setCanvasWidth(0.7)
+    ...
+    .show();
+```
+
+Preview :
+<p align="center">
+  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_10.jpg" width="500"/>
+</p>
+
+##
+
+[FullCode](https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/app/src/main/java/com/gzeinnumer/mylibsearchviewdialog/MainActivity.java) **Preview** :
+
+<p align="center">
+  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_17.jpg" width="500"/>
 </p>

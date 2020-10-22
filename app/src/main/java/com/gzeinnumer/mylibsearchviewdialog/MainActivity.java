@@ -62,11 +62,88 @@ public class MainActivity extends AppCompatActivity {
         list.add("in voluptate");
         list.add("velit esse cillum dolor");
 
+//        new SearchViewDialog(getSupportFragmentManager(), list)
+//                .setDialogCanvas(getResources().getDrawable(R.drawable.dialog_shadow))
+//                .setTitle("ini title")
+//                .setContent("ini content")
+//                .setContentListHeight(300)
+//                .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle() {
+//                    @Override
+//                    public void onOkSingle(int position, String value) {
+//                        String temp = "Single Select :\n\n";
+//                        temp = temp+"position on list => "+position+"\n";
+//                        temp = temp+"value on list => "+value+"\n";
+//
+//                        tv.setText(temp);
+//                        Toast.makeText(MainActivity.this, temp, Toast.LENGTH_SHORT).show();
+//                    }
+//                })
+//                .onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti(){
+//                    @Override
+//                    public void onOkMulti(List<SearchViewModel> data) {
+//                        String temp = "Multi Select :\n";
+//                        temp = temp + "Total Data => "+data.size()+"\n\n";
+//                        for (SearchViewModel d: data){
+//                            temp = temp + "position on list => "+d.getPosition()+"\n";
+//                            temp = temp + "value on list => "+d.getName()+"\n\n";
+//                        }
+//                        tv.setText(temp);
+//                    }
+//                })
+//                .onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed() {
+//                    @Override
+//                    public void onCancelPressed() {
+//                        Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
+//                    }
+//                })
+//                .show();
+
         new SearchViewDialog(getSupportFragmentManager(), list)
-                .setDialogCanvas(getResources().getDrawable(R.drawable.dialog_shadow))
+                .setCanvasWidth(1.0)
+                .setDialogCanvas(getResources().getDrawable(R.drawable.rounded_corner_2))
+
                 .setTitle("ini title")
+                .setTitleSize(21)
+                .setTitleColor(getResources().getColor(R.color.colorAccent))
+//                .setTitleColor(Color.parseColor("#03DAC5"))
+                .setTitleAlignment(View.TEXT_ALIGNMENT_TEXT_END)
+
                 .setContent("ini content")
-                .setContentListHeight(300)
+                .setContentSize(21)
+                .setContentColor(getResources().getColor(R.color.colorAccent))
+//                .setContentColor(Color.parseColor("#03DAC5"))
+                .setContentAlignment(View.TEXT_ALIGNMENT_TEXT_END)
+
+                .setBtnCancelTitle("Batal")
+                .setBtnCancelTitleColor(getResources().getColor(R.color.colorAccent))
+//                .setBtnCancelTitleColor(Color.parseColor("#03DAC5"))
+                .setCancelIconLeft(R.drawable.ic_baseline_add_24)
+                .setCancelIconTop(R.drawable.ic_baseline_add_24)
+                .setCancelIconRight(R.drawable.ic_baseline_add_24)
+                .setCancelIconBottom(R.drawable.ic_baseline_add_24)
+
+                .setBtnOkTitle("Yuhuu")
+                .setBtnOkTitleColor(getResources().getColor(R.color.colorAccent))
+//                .setBtnOkTitleColor(Color.parseColor("#03DAC5"))
+                .setOkIconLeft(R.drawable.ic_baseline_add_24)
+                .setOkIconTop(R.drawable.ic_baseline_add_24)
+                .setOkIconTop(R.drawable.ic_baseline_add_24)
+                .setOkIconBottom(R.drawable.ic_baseline_add_24)
+
+                .setButtonTextSize(21)
+                .setButtonStyle(ButtonStyle.ButtonOutlined)
+                .setButtonGravity(Gravity.CENTER)
+
+                .setTextSearchSize(30)
+                .setTextSearchColor(getResources().getColor(R.color.colorAccent))
+//                .setTextSearchColor(Color.parseColor("#03DAC5"))
+
+                .setContentListHeight(900)
+
+                .setTextListSize(30)
+                .setTextListColor(getResources().getColor(R.color.colorAccent))
+//                .setTextListColor(Color.parseColor("#03DAC5"))
+
                 .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle() {
                     @Override
                     public void onOkSingle(int position, String value) {
@@ -97,67 +174,5 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .show();
-
-//        new SearchViewDialog(getSupportFragmentManager(), list)
-//                .setCanvasWidth(1.0)
-//                .setDialogCanvas(getResources().getDrawable(R.drawable.rounded_corner_2))
-//
-//                .setTitle("ini title")
-//                .setTitleSize(21)
-//                .setTitleColor(getResources().getColor(R.color.colorAccent))
-////                .setTitleColor(Color.parseColor("#03DAC5"))
-//                .setTitleAlignment(View.TEXT_ALIGNMENT_TEXT_END)
-//
-//                .setContent("ini content")
-//                .setContentSize(21)
-//                .setContentColor(getResources().getColor(R.color.colorAccent))
-////                .setContentColor(Color.parseColor("#03DAC5"))
-//                .setContentAlignment(View.TEXT_ALIGNMENT_TEXT_END)
-//
-//                .setBtnCancelTitle("Batal")
-//                .setBtnCancelTitleColor(getResources().getColor(R.color.colorAccent))
-////                .setBtnCancelTitleColor(Color.parseColor("#03DAC5"))
-//                .setCancelIconLeft(R.drawable.ic_baseline_add_24)
-//                .setCancelIconTop(R.drawable.ic_baseline_add_24)
-//                .setCancelIconRight(R.drawable.ic_baseline_add_24)
-//                .setCancelIconBottom(R.drawable.ic_baseline_add_24)
-//
-//                .setBtnOkTitle("Yuhuu")
-//                .setBtnOkTitleColor(getResources().getColor(R.color.colorAccent))
-////                .setBtnOkTitleColor(Color.parseColor("#03DAC5"))
-//                .setOkIconLeft(R.drawable.ic_baseline_add_24)
-//                .setOkIconTop(R.drawable.ic_baseline_add_24)
-//                .setOkIconTop(R.drawable.ic_baseline_add_24)
-//                .setOkIconBottom(R.drawable.ic_baseline_add_24)
-//
-//                .setButtonTextSize(21)
-//                .setButtonStyle(ButtonStyle.ButtonOutlined)
-//                .setButtonGravity(Gravity.CENTER)
-//
-//                .setTextSearchSize(30)
-//                .setTextSearchColor(getResources().getColor(R.color.colorAccent))
-////                .setTextSearchColor(Color.parseColor("#03DAC5"))
-//
-//                .setContentListHeight(900)
-//
-//                .setTextListSize(30)
-//                .setTextListColor(getResources().getColor(R.color.colorAccent))
-////                .setTextListColor(Color.parseColor("#03DAC5"))
-//
-//                .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle() {
-//                    @Override
-//                    public void onOkPressed(int position, String value) {
-//                        Toast.makeText(MainActivity.this, position+"_"+value, Toast.LENGTH_SHORT).show();
-//                    }
-//                })
-//                .onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti(){
-//                    @Override
-//                    public void onOkPressed(List<SearchViewModel> data) {
-//                        for (SearchViewModel d: data){
-//                            Log.d(TAG, "onOkPressed: "+d.getPosition()+"_"+d.getName());
-//                        }
-//                    }
-//                })
-//                .show();
     }
 }
