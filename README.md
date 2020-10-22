@@ -159,18 +159,18 @@ dialog.show();
 
 | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_2.jpg"/> | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_4.jpg"/> | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_6.jpg"/> |
 |:-----------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
-| `Single Select Item`                                                                                             | Click `OK` and call function `onOkPressedCallBackSingle`                                                         | Fiture `Filter`                                                                                                  |
+| `Single Select Item` Preview, you only can select **1** Item                                                     | Click `OK` and call function `onOkPressedCallBackSingle`                                                         | Fiture `Filter` will enable on `Single Select` or `Multi Select`                                                 |
 
 
 | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_5.jpg" /> | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_7.jpg"/> |
 |:------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
-| `Multi Select Item`                                                                                               | Click `OK` and call function `onOkPressedCallBackMulti`                                                          |
+| `Multi Select Item` Preview, you can select more than **1** Item                                                  | Click `OK` and call function `onOkPressedCallBackMulti`                                                          |
 
 #### SearchViewDialog -> Customize
 
 <p align="center">
   <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_15.jpg" width="500"/>
-</p>
+</p>K
 
 You can Customize your dialog UI. [**ReadMore**](https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/README_1.md).
 
