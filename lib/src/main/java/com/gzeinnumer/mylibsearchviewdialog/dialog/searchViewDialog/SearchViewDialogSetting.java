@@ -7,6 +7,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -108,7 +109,11 @@ public class SearchViewDialogSetting extends BaseDialog implements MyHolderSingl
 
     @Override
     protected int contentView() {
-        return R.layout.select_dialog;
+        if (isFullScreen){
+            return R.layout.select_dialog_fullscreen;
+        } else {
+            return R.layout.select_dialog;
+        }
     }
 
     @Override

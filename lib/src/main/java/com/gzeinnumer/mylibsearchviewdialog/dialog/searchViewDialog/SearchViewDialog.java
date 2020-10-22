@@ -193,6 +193,11 @@ public class SearchViewDialog extends SearchViewDialogSetting {
         return this;
     }
 
+    public SearchViewDialog enableFullScreen() {
+        this.isFullScreen = true;
+        return this;
+    }
+
     //callback
     public interface OnCancelPressed {
         void onCancelPressed();

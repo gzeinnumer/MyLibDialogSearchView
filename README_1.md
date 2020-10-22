@@ -155,6 +155,8 @@ Preview :
   <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_10.jpg" width="300"/>
 </p>
 
+##
+
 **Look At Orange Arrow.** You can change `Height` of dialog, with `number`.
 
 <p align="center">
@@ -172,6 +174,23 @@ new SearchViewDialog(getSupportFragmentManager(), list)
 Preview :
 <p align="center">
   <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_20.jpg" width="300"/>
+</p>
+
+##
+
+**FullScreenDialog** You can make dialog `FullScreen`.
+
+**Code** :
+```java
+new SearchViewDialog(getSupportFragmentManager(), list)
+    .enableFullScreen()
+    ...
+    .show();
+```
+
+Preview :
+<p align="center">
+  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_21.jpg" width="300"/>
 </p>
 
 ##

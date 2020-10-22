@@ -25,6 +25,7 @@ import com.gzeinnumer.mylibsearchviewdialog.R;
 public abstract class BaseDialog extends DialogFragment {
 
     protected double canvasWidth = 0.9;
+    protected boolean isFullScreen = false;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -82,14 +83,25 @@ public abstract class BaseDialog extends DialogFragment {
         Display display = window.getWindowManager().getDefaultDisplay();
         display.getSize(size);
 
-        int width = size.x;
-        int height = WindowManager.LayoutParams.WRAP_CONTENT;
+        int width;
+        int height;
 
-        //setLayout(int width, int height)
-        if (canvasWidth>=0.1 && canvasWidth<=1.0){
-            window.setLayout((int) (width * canvasWidth), height);
+        if (isFullScreen){
+            width = WindowManager.LayoutParams.MATCH_PARENT;
+            height = WindowManager.LayoutParams.MATCH_PARENT;
+
+            //setLayout(int width, int height)
+            window.setLayout( width, height);
+
         } else {
-            window.setLayout((int) (width * 0.9), height);
+            width = size.x;
+            height = WindowManager.LayoutParams.WRAP_CONTENT;
+            //setLayout(int width, int height)
+            if (canvasWidth>=0.1 && canvasWidth<=1.0){
+                window.setLayout((int) (width * canvasWidth), height);
+            } else {
+                window.setLayout((int) (width * 0.9), height);
+            }
         }
         window.setGravity(Gravity.CENTER);
     }

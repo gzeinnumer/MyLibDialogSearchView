@@ -63,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
         list.add("velit esse cillum dolor");
 
         new SearchViewDialog(getSupportFragmentManager(), list)
+                .enableFullScreen()
                 .setTitle("ini title")
                 .setContent("ini content")
-                .setContentListHeight(1100)
                 .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle() {
                     @Override
                     public void onOkSingle(int position, String value) {
