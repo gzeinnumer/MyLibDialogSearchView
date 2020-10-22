@@ -68,7 +68,7 @@ dependencies {
 
 ### SearchViewDialog
 Dialog with **1 Title, 1 Content, 1 EditText, 1 RecyclerView, 1 Negative Button, 1 Positive Button**. You can choise `Single Item Select` or `Multi Item Select`. The difference is only in `callback` function.
-- Single Item Select
+- `Single Item Select`. Use `onOkPressedCallBackSingle` to enable `Multi Select Item`.
 **Code** :
 ```java
 ArrayList<String> list = new ArrayList<>();
@@ -79,16 +79,15 @@ list.add("adipiscing elit sed do");
 new SearchViewDialog(getSupportFragmentManager(), list)
     .setTitle("ini title")
     .setContent("ini content")
-    .onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti(){
+    .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle() {
         @Override
-        public void onOkMulti(List<SearchViewModel> data) {
-            String temp = "Multi Select :\n";
-            temp = temp + "Total Data => "+data.size()+"\n\n";
-            for (SearchViewModel d: data){
-                temp = temp + "position on list => "+d.getPosition()+"\n";
-                temp = temp + "value on list => "+d.getName()+"\n\n";
-            }
+        public void onOkSingle(int position, String value) {
+            String temp = "Single Select :\n\n";
+            temp = temp+"position on list => "+position+"\n";
+            temp = temp+"value on list => "+value+"\n";
+
             tv.setText(temp);
+            Toast.makeText(MainActivity.this, temp, Toast.LENGTH_SHORT).show();
         }
     })
     .onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed() {
@@ -100,7 +99,7 @@ new SearchViewDialog(getSupportFragmentManager(), list)
     .show();
 ```
 
-- Multi Item Select
+- `Multi Item Select`. Use `onOkPressedCallBackMulti` to enable `Multi Select Item`.
 **Code** :
 ```java
 ArrayList<String> list = new ArrayList<>();
@@ -166,7 +165,7 @@ dialog.show();
 #### SearchViewDialog -> Customize
 
 <p align="center">
-  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialog_1.png" width="500"/>
+  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_15.jpg" width="500"/>
 </p>
 
 You can Customize your dialog UI. [**ReadMore**](https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/README_1.md).
