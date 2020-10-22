@@ -1,36 +1,33 @@
 <p align="center">
-  <img src="https://github.com/gzeinnumer/MyLibDialog/blob/main/preview/MyLibDialog_3.png" width="500"/>
+  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_2.jpg" width="500"/><img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_5.jpg" width="500"/>
 </p>
 
 <h1 align="center">
-  MyLibDialog - Easy Dialog
+  MyLibDialogSearchView - Easy Drop Down
 </h1>
 
 <div align="center">
-    <a><img src="https://img.shields.io/badge/Version-1.0.3-brightgreen.svg?style=flat"></a>
+    <a><img src="https://img.shields.io/badge/Version-1.0.0-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
     <a><img src="https://img.shields.io/badge/Koltin-Suport-green?logo=kotlin&style=flat"></a>
     <a href="https://github.com/gzeinnumer"><img src="https://img.shields.io/github/followers/gzeinnumer?label=follow&style=social"></a>
     <br>
-    <p>Simple way to use Dialog Fragment</p>
+    <p>Simple way to select Item Single or Multi</p>
 </div>
 
 ---
 
 ### Feature List
-- [x] [ConfirmDialog](#confirmdialog)
-- [x] [InfoDialog](#infodialog)
-- [x] [NumberPickerDialog](#numberpickerdialog)
-- [x] [LoadingDialog](#loadingdialog)
-- [x] [SingleDatePickerDialog](#singledatepickerdialog)
-- [x] [MultiDatePickerDialog](#multidatepickerdialog)
+- [x] [Single Select](#)
+- [x] [Multi Select](#)
+- [x] [Filter](#)
 
 ---
 
 ### Tech stack and 3rd library
 - Material.io ([docs](https://material.io/develop/android/docs/getting-started))
-- agrawalsuneet/DotLoadersPack-Android ([docs](https://github.com/agrawalsuneet/DotLoadersPack-Android))
+- Multi and Single Selection in Recyclerview ([docs](https://medium.com/@maydin/multi-and-single-selection-in-recyclerview-d29587a7dee2)) ([example](https://github.com/gzeinnumer/MultiandSingleSelectioninRecyclerView))
 - DialogFragment ([docs](https://developer.android.com/reference/android/app/DialogFragment))
 
 ---
