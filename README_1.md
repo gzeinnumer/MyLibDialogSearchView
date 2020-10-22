@@ -1,7 +1,7 @@
 ## ConfirmDialog -> Customize
 
 <p align="center">
-  <img src="https://github.com/gzeinnumer/MyLibDialog/blob/main/preview/MyLibDialog_1.png"/>
+  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_15.png"/>
 </p>
 
 You can change UI with this configuration.
@@ -38,19 +38,25 @@ You can change UI with this configuration.
       - `View.TEXT_ALIGNMENT_TEXT_START`
       - etc.
 
-**3. Button Cancel**
-- Change Text Button Cancel
-  - `.setBtnCancelTitle("Batal")`
-- Change Text Button Cancel Color
-  - `.setBtnCancelTitleColor(getResources().getColor(R.color.colorAccent))`
-  - `.setBtnCancelTitleColor(Color.parseColor("#03DAC5"))`
-- Change Icon Button Cancel
-  - `.setCancelIconLeft(R.drawable.ic_baseline_add_24)`
-  - `.setCancelIconTop(R.drawable.ic_baseline_add_24)`
-  - `.setCancelIconRight(R.drawable.ic_baseline_add_24)`
-  - `.setCancelIconBottom(R.drawable.ic_baseline_add_24)`
+**3. Filter Field**
+- Change Filter Text Field Size
+  - `.setTextSearchSize(21)`
+- Change Filter Text Field Color
+  - `.setTextSearchColor(getResources().getColor(R.color.colorAccent))`
+  - `.setTextSearchColor(Color.parseColor("#03DAC5"))`
 
-**4. Button Ok**
+**4. Text List Item**
+- Change Filter Text Field Size
+  - `.setTextListSize(21)`
+- Change Filter Text Field Color
+  - `.setTextListColor(getResources().getColor(R.color.colorAccent))`
+  - `.setTextListColor(Color.parseColor("#03DAC5"))`
+
+**5. Content List**
+- Change RecyclerView Height
+  - `.setContentListHeight(900)`
+
+**6. Button Ok**
 - Change Text Button Ok
   - `.setBtnOkTitle("Yuhuu")`
 - Change Text Button Ok Color
@@ -62,7 +68,19 @@ You can change UI with this configuration.
   - `.setOkIconRight(R.drawable.ic_baseline_add_24)`
   - `.setOkIconBottom(R.drawable.ic_baseline_add_24)`
 
-**5. Parent Button**
+**7. Button Cancel**
+- Change Text Button Cancel
+  - `.setBtnCancelTitle("Batal")`
+- Change Text Button Cancel Color
+  - `.setBtnCancelTitleColor(getResources().getColor(R.color.colorAccent))`
+  - `.setBtnCancelTitleColor(Color.parseColor("#03DAC5"))`
+- Change Icon Button Cancel
+  - `.setCancelIconLeft(R.drawable.ic_baseline_add_24)`
+  - `.setCancelIconTop(R.drawable.ic_baseline_add_24)`
+  - `.setCancelIconRight(R.drawable.ic_baseline_add_24)`
+  - `.setCancelIconBottom(R.drawable.ic_baseline_add_24)`
+
+**8. Parent Button**
 - Change Text Button Size
   - `.setButtonTextSize(21)`
 - Change Style Button
