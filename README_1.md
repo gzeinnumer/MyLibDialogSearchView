@@ -54,7 +54,7 @@ You can change UI with this configuration.
 
 **5. Content List**
 - Change RecyclerView Height
-  - `.setContentListHeight(900)`
+  - `.setContentListHeight(900)` [300](https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_9.jpg) [900](https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_8.jpg)
 
 **6. Button Ok**
 - Change Text Button Ok
@@ -143,14 +143,14 @@ new SearchViewDialog(getSupportFragmentManager(), list)
 **Code** :
 ```java
 new SearchViewDialog(getSupportFragmentManager(), list)
-    .setCanvasWidth(0.7)
+    .setCanvasWidth(0.5)
     ...
     .show();
 ```
 
 Preview :
 <p align="center">
-  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_10.jpg" width="500"/>
+  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_10.jpg" width="300"/>
 </p>
 
 ##
@@ -158,5 +158,5 @@ Preview :
 [FullCode](https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/app/src/main/java/com/gzeinnumer/mylibsearchviewdialog/MainActivity.java) **Preview** :
 
 <p align="center">
-  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_17.jpg" width="500"/>
+  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_17.jpg" width="300"/>
 </p>
