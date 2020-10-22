@@ -49,7 +49,7 @@ allprojects {
 **Step 2.** add dependensi to your `build.gradle` (Module) :
 ```gradle
 dependencies {
-  implementation 'com.github.gzeinnumer:MyLibDialog:versi'
+  implementation 'com.github.gzeinnumer:MyLibDialogSearchView:versi'
   implementation 'com.google.android.material:material:1.2.0'
 }
 ```
