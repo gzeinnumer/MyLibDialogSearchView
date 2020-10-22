@@ -1,7 +1,7 @@
-## ConfirmDialog -> Customize
+## SearchViewDialog -> Customize
 
 <p align="center">
-  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_15.png"/>
+  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_15.jpg"/>
 </p>
 
 You can change UI with this configuration.
