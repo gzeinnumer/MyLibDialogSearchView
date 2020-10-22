@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 .setContentListHeight(300)
                 .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle() {
                     @Override
-                    public void onOkPressed(int position, String value) {
+                    public void onOkSingle(int position, String value) {
                         String temp = "Single Select :\n\n";
                         temp = temp+"position on list => "+position+"\n";
                         temp = temp+"value on list => "+value+"\n";
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti(){
                     @Override
-                    public void onOkPressed(List<SearchViewModel> data) {
+                    public void onOkMulti(List<SearchViewModel> data) {
                         String temp = "Multi Select :\n";
                         temp = temp + "Total Data => "+data.size()+"\n\n";
                         for (SearchViewModel d: data){
@@ -88,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
                             temp = temp + "value on list => "+d.getName()+"\n\n";
                         }
                         tv.setText(temp);
+                    }
+                })
+                .onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed() {
+                    @Override
+                    public void onCancelPressed() {
+                        Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .show();

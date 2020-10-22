@@ -8,9 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,7 +17,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.gzeinnumer.mylibsearchviewdialog.R;
 import com.gzeinnumer.mylibsearchviewdialog.constant.ButtonStyle;
 import com.gzeinnumer.mylibsearchviewdialog.constant.SelectType;
@@ -322,9 +319,9 @@ public class SearchViewDialogSetting extends BaseDialog implements MyHolderSingl
         Log.d(TAG, "actionOk: "+selectedItems);
         if (selectedItems.size()>0) {
             if (type == SelectType.TYPE_SINGLE) {
-                onOkPressedSingle.onOkPressed(selectedItems.get(0).getPosition(), selectedItems.get(0).getName());
+                onOkPressedSingle.onOkSingle(selectedItems.get(0).getPosition(), selectedItems.get(0).getName());
             } else {
-                onOkPressedMulti.onOkPressed(selectedItems);
+                onOkPressedMulti.onOkMulti(selectedItems);
             }
         }
         getDialog().dismiss();

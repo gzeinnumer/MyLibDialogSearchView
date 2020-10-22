@@ -163,10 +163,6 @@ public class SearchViewDialog extends SearchViewDialogSetting {
         return this;
     }
 
-    public void show() {
-        this.show(_transaction, SearchViewDialog.TAG);
-    }
-
     public SearchViewDialog setContentListHeight(int listHeight) {
         this.listHeight = listHeight;
         return this;
@@ -203,10 +199,14 @@ public class SearchViewDialog extends SearchViewDialogSetting {
     }
 
     public interface OnOkPressedSingle {
-        void onOkPressed(int position, String value);
+        void onOkSingle(int position, String value);
     }
 
     public interface OnOkPressedMulti {
-        void onOkPressed(List<SearchViewModel> data);
+        void onOkMulti(List<SearchViewModel> data);
+    }
+
+    public void show() {
+        this.show(_transaction, SearchViewDialog.TAG);
     }
 }
