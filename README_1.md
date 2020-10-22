@@ -134,6 +134,8 @@ new SearchViewDialog(getSupportFragmentManager(), list)
     .show();
 ```
 
+##
+
 **Look At Orange Arrow.** You can change `Width` of dialog, with `percentage` of your screen. you can use value from `0.5` - `1.0` (50% - 100%).
 
 <p align="center">
@@ -151,6 +153,25 @@ new SearchViewDialog(getSupportFragmentManager(), list)
 Preview :
 <p align="center">
   <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_10.jpg" width="300"/>
+</p>
+
+**Look At Orange Arrow.** You can change `Height` of dialog, with `number`.
+
+<p align="center">
+  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_19.jpg" width="500"/>
+</p>
+
+**Code** :
+```java
+new SearchViewDialog(getSupportFragmentManager(), list)
+    .setContentListHeight(1100)
+    ...
+    .show();
+```
+
+Preview :
+<p align="center">
+  <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_20.jpg" width="300"/>
 </p>
 
 ##
