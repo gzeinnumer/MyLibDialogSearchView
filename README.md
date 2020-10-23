@@ -70,7 +70,7 @@ dependencies {
 
 | OLD                                                       | New                                                                 |
 |:----------------------------------------------------------|:--------------------------------------------------------------------|
-| `new SearchViewDialog(getSupportFragmentManager(), list)` | `new SearchViewDialog(getSupportFragmentManager()) .setItems(list)` |
+| `SearchViewDialog(getSupportFragmentManager(), list)` | `SearchViewDialog(getSupportFragmentManager()) .setItems(list)` |
 
 ---
 
