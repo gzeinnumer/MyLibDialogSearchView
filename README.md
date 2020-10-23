@@ -74,6 +74,51 @@ dependencies {
 
 ### SearchViewDialog
 Dialog with **1 Title, 1 Content, 1 EditText, 1 RecyclerView, 1 Negative Button, 1 Positive Button**. You can choise `Single Item Select` or `Multi Item Select`. The difference is only in `callback` function.
+- **Content Item** there is 3 type of is that you can sent to this dialog.
+**Type 1**
+```java
+String[] arrayString = {"M", "Fadli", "Zein"};
+new SearchViewDialog(getSupportFragmentManager())
+        .setItems(arrayString);
+```
+**Type 2**
+```java
+ArrayList<String> listString = new ArrayList<>();
+listString.add("Lorem ipsum dolor");
+new SearchViewDialog(getSupportFragmentManager())
+        .setItems(listString);
+```
+**Type 3** for this type you should override function `toString()` to your `model pojo`
+```java
+
+public class ExampleModel {
+
+    private int id;
+    private String name;
+    private String address;
+    
+    //constructor
+    
+    //getter
+    //setter
+
+    @Override
+    public String toString() {
+        return "ExampleModel{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
+}
+```
+```java
+ArrayList<ExampleModel> listObject = new ArrayList<>();
+listObject.add(new ExampleModel(1, "Zein", "Balbar"));
+new SearchViewDialog(getSupportFragmentManager())
+        .setItems(listObject);
+```
+
 - **Single Item Select**. Use `onOkPressedCallBackSingle` to enable `Multi Select Item`.
 **Code** :
 ```java
