@@ -18,26 +18,26 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<String> list = new ArrayList<>();
+    ArrayList<String> listString = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        list.add("Lorem ipsum dolor");
-        list.add("sit amet, consectetur");
-        list.add("adipiscing elit, sed do");
-        list.add("eiusmod tempor");
-        list.add("incididunt ut labore et dolore");
-        list.add("magna aliqua");
-        list.add("Ut enim ad minim veniam, quis nostrud exercitation");
-        list.add("ullamco laboris nisi ut aliquip");
-        list.add("ex ea commodo consequat.");
-        list.add("Duis aute irure dolor");
-        list.add("in reprehenderit");
-        list.add("in voluptate");
-        list.add("velit esse cillum dolor");
+        listString.add("Lorem ipsum dolor");
+        listString.add("sit amet, consectetur");
+        listString.add("adipiscing elit, sed do");
+        listString.add("eiusmod tempor");
+        listString.add("incididunt ut labore et dolore");
+        listString.add("magna aliqua");
+        listString.add("Ut enim ad minim veniam, quis nostrud exercitation");
+        listString.add("ullamco laboris nisi ut aliquip");
+        listString.add("ex ea commodo consequat.");
+        listString.add("Duis aute irure dolor");
+        listString.add("in reprehenderit");
+        listString.add("in voluptate");
+        listString.add("velit esse cillum dolor");
 
         initOnClick();
     }
@@ -53,10 +53,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //choise 1
-                initDialogSingle();
+//                initDialogSingle();
 //                initDialogMulti();
 //                initDialogSingleCustom();
 //                initDialogMultiCustom();
+                initDialogSingleEgi10();
             }
         });
     }
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Main_Activity";
 
     private void initDialogSingle() {
-        new SearchViewDialog(getSupportFragmentManager(), list)
+        new SearchViewDialog(getSupportFragmentManager(), listString)
                 .setTitle("ini title")
                 .setContent("ini content")
                 .setButtonStyle(ButtonStyle.ButtonContained)
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDialogMulti() {
-        new SearchViewDialog(getSupportFragmentManager(), list)
+        new SearchViewDialog(getSupportFragmentManager(), listString)
                 .enableFullScreen()
                 .setTitle("ini title")
                 .setContent("ini content")
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDialogSingleCustom() {
-        new SearchViewDialog(getSupportFragmentManager(), list)
+        new SearchViewDialog(getSupportFragmentManager(), listString)
                 .setCanvasWidth(1.0)
                 .setDialogCanvas(getResources().getDrawable(R.drawable.rounded_corner_2))
 
@@ -185,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDialogMultiCustom() {
-        new SearchViewDialog(getSupportFragmentManager(), list)
+        new SearchViewDialog(getSupportFragmentManager(), listString)
                 .setCanvasWidth(1.0)
                 .setDialogCanvas(getResources().getDrawable(R.drawable.rounded_corner_2))
 
@@ -250,6 +251,41 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .show();
+    }
 
+    private void initDialogSingleEgi10() {
+        ArrayList<ExampleModel> listObject = new ArrayList<>();
+        listObject.add(new ExampleModel(1, "Zein", "Balbar"));
+        listObject.add(new ExampleModel(2, "Zein2", "Balbar2"));
+        listObject.add(new ExampleModel(3, "Zein3", "Balbar3"));
+        listObject.add(new ExampleModel(4, "Zein4", "Balbar4"));
+
+        String[] arrayString = {"M", "Fadli", "Zein"};
+        new SearchViewDialog(getSupportFragmentManager(),listString)
+//                .setItems(listString)
+//                .setItems(listObject)
+//                .setItems(arrayString)
+                .setTitle("ini title")
+                .setContent("ini content")
+                .setButtonStyle(ButtonStyle.ButtonContained)
+                .setButtonColor(R.color.amber_200)
+                .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle() {
+                    @Override
+                    public void onOkSingle(int position, String value) {
+                        String temp = "Single Select :\n\n";
+                        temp = temp+"position on list => "+position+"\n";
+                        temp = temp+"value on list => "+value+"\n";
+
+                        tv.setText(temp);
+                        Toast.makeText(MainActivity.this, temp, Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed() {
+                    @Override
+                    public void onCancelPressed() {
+                        Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .show();
     }
 }
