@@ -72,6 +72,8 @@ dependencies {
 |:----------------------------------------------------------|:--------------------------------------------------------------------|
 | `new SearchViewDialog(getSupportFragmentManager(), list)` | `new SearchViewDialog(getSupportFragmentManager()) .setItems(list)` |
 
+---
+
 ### SearchViewDialog
 Dialog with **1 Title, 1 Content, 1 EditText, 1 RecyclerView, 1 Negative Button, 1 Positive Button**. You can choise `Single Item Select` or `Multi Item Select`. The difference is only in `callback` function.
 - **Content Item** there is 3 type of is that you can sent to this dialog.
