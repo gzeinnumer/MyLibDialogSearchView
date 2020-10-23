@@ -187,6 +187,7 @@ new SearchViewDialog(getSupportFragmentManager(), list)
     ...
     .show();
 ```
+**Notes**. This function will make `.setContentListHeight(1100)` and `.setCanvasWidth(0.5)` ignored.
 
 Preview :
 <p align="center">

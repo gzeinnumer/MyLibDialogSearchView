@@ -238,7 +238,7 @@ public class SearchViewDialogSetting extends BaseDialog implements MyHolderSingl
             _rv.setHasFixedSize(true);
         }
 
-        if (listHeight>0){
+        if (listHeight>0 && !isFullScreen){
             ViewGroup.LayoutParams params =_rv.getLayoutParams();
             params.height=listHeight;
             _rv.setLayoutParams(params);
