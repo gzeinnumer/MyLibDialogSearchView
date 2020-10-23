@@ -35,6 +35,7 @@ public class SearchViewDialogSetting extends BaseDialog implements MyHolderSingl
 
     protected SearchViewDialog.OnOkPressedSingle onOkPressedSingle;
     protected SearchViewDialog.OnOkPressedMulti onOkPressedMulti;
+    protected int buttonColor = 0;
 
     private View _view;
     private LinearLayout _dialogCanvas;
@@ -213,6 +214,11 @@ public class SearchViewDialogSetting extends BaseDialog implements MyHolderSingl
 
         if(tvContentAlignment != View.TEXT_ALIGNMENT_TEXT_START){
             _tvContent.setTextAlignment(tvContentAlignment);
+        }
+
+        if (buttonColor!=0 && btnStyle == ButtonStyle.ButtonContained){
+            _dBtnCancelMBC.setBackgroundColor(getResources().getColor(buttonColor));
+            _dBtnOkMBC.setBackgroundColor(getResources().getColor(buttonColor));
         }
 
         if (listFromUser.size()>0){

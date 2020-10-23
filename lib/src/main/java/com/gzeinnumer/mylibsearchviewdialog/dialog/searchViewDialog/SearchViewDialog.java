@@ -198,6 +198,11 @@ public class SearchViewDialog extends SearchViewDialogSetting {
         return this;
     }
 
+    public SearchViewDialog setButtonColor(int color) {
+        this.buttonColor = color;
+        return this;
+    }
+
     //callback
     public interface OnCancelPressed {
         void onCancelPressed();

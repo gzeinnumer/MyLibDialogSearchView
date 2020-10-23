@@ -67,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
         new SearchViewDialog(getSupportFragmentManager(), list)
                 .setTitle("ini title")
                 .setContent("ini content")
+                .setButtonStyle(ButtonStyle.ButtonContained)
+                .setButtonColor(R.color.amber_200)
                 .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle() {
                     @Override
                     public void onOkSingle(int position, String value) {
@@ -149,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
                 .setButtonTextSize(21)
                 .setButtonStyle(ButtonStyle.ButtonOutlined)
                 .setButtonGravity(Gravity.CENTER)
+                .setButtonColor(R.color.amber_200)
 
                 .setTextSearchSize(30)
                 .setTextSearchColor(getResources().getColor(R.color.colorAccent))
