@@ -68,9 +68,9 @@ dependencies {
 
 **Deprecated**
 
-| OLD                                                       | New                                                                 |
-|:----------------------------------------------------------|:--------------------------------------------------------------------|
-| `SearchViewDialog(getSupportFragmentManager(), list)` | `SearchViewDialog(getSupportFragmentManager()) .setItems(list)` |
+| OLD                                                    | New                                                             |
+|:-------------------------------------------------------|:----------------------------------------------------------------|
+| `SearchViewDialog(getSupportFragmentManager(), list)`  | `SearchViewDialog(getSupportFragmentManager()) .setItems(list)` |
 
 ---
 
@@ -90,7 +90,7 @@ listString.add("Lorem ipsum dolor");
 new SearchViewDialog(getSupportFragmentManager())
         .setItems(listString);
 ```
-**Type 3** for this type you should override function `toString()` to your `model pojo`
+**Type 3** for this type you should override function `toString()` in your `model pojo`
 ```java
 
 public class ExampleModel {
