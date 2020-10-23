@@ -1,6 +1,7 @@
 package com.gzeinnumer.mylibsearchviewdialog.dialog.searchViewDialog;
 
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -11,6 +12,7 @@ import com.gzeinnumer.mylibsearchviewdialog.constant.SelectType;
 import com.gzeinnumer.mylibsearchviewdialog.model.SearchViewModel;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SearchViewDialog extends SearchViewDialogSetting {
@@ -33,6 +35,27 @@ public class SearchViewDialog extends SearchViewDialogSetting {
         if (previous != null) {
             _transaction.remove(previous);
         }
+    }
+
+    public SearchViewDialog(FragmentManager _context) {
+        this._context = _context;
+        _transaction = _context.beginTransaction();
+        Fragment previous = _context.findFragmentByTag(SearchViewDialog.TAG);
+        if (previous != null) {
+            _transaction.remove(previous);
+        }
+    }
+
+    // Input Model
+    public <T> SearchViewDialog setItems(T[] items) {
+         return setItems(Arrays.asList(items));
+    }
+
+    public <T> SearchViewDialog setItems(List<T> items) {
+        for (int i = 0; i < items.size(); i++) {
+            this.listFromUser.add(items.get(i).toString());
+        }
+        return this;
     }
 
     //CANVAS
