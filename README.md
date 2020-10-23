@@ -66,6 +66,12 @@ dependencies {
 
 ---
 
+**Deprecated**
+
+| OLD                                                     | New                                                              |
+|:--------------------------------------------------------|:-----------------------------------------------------------------|
+| new SearchViewDialog(getSupportFragmentManager(), list) | new SearchViewDialog(getSupportFragmentManager()).setItems(list) |
+
 ### SearchViewDialog
 Dialog with **1 Title, 1 Content, 1 EditText, 1 RecyclerView, 1 Negative Button, 1 Positive Button**. You can choise `Single Item Select` or `Multi Item Select`. The difference is only in `callback` function.
 - **Single Item Select**. Use `onOkPressedCallBackSingle` to enable `Multi Select Item`.
@@ -76,7 +82,8 @@ list.add("Lorem ipsum dolor");
 list.add("sit amet, consectetur");
 list.add("adipiscing elit sed do");
 
-new SearchViewDialog(getSupportFragmentManager(), list)
+new SearchViewDialog(getSupportFragmentManager())
+    .setItems(list)
     .setTitle("ini title")
     .setContent("ini content")
     .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle() {
@@ -107,7 +114,8 @@ list.add("Lorem ipsum dolor");
 list.add("sit amet, consectetur");
 list.add("adipiscing elit sed do");
 
-new SearchViewDialog(getSupportFragmentManager(), list)
+new SearchViewDialog(getSupportFragmentManager())
+    .setItems(list)
     .setTitle("ini title")
     .setContent("ini content")
     .onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti(){
@@ -134,7 +142,8 @@ new SearchViewDialog(getSupportFragmentManager(), list)
 or you can write code like this :
 
 ```java
-SearchViewDialog dialog = new SearchViewDialog(getSupportFragmentManager(), list)
+SearchViewDialog dialog = new SearchViewDialog(getSupportFragmentManager())
+    .setItems(list)
     .setTitle("ini title")
     .setContent("ini content");
 

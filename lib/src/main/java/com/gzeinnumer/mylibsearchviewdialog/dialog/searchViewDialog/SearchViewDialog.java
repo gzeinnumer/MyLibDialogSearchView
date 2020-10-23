@@ -1,7 +1,6 @@
 package com.gzeinnumer.mylibsearchviewdialog.dialog.searchViewDialog;
 
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -14,7 +13,6 @@ import com.gzeinnumer.mylibsearchviewdialog.model.SearchViewModel;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 public class SearchViewDialog extends SearchViewDialogSetting {
 
     public static final String TAG = "CustomDialog";
@@ -22,6 +20,12 @@ public class SearchViewDialog extends SearchViewDialogSetting {
     private FragmentManager _context;
     private FragmentTransaction _transaction;
 
+    /**
+     * @deprecated "for better performance, you should use
+     * new SearchViewDialog(getSupportFragmentManager())
+     *     .setItems(listString)"
+     */
+    @Deprecated
     public SearchViewDialog(FragmentManager context, ArrayList<String> list) {
         this._context = context;
 
@@ -47,6 +51,14 @@ public class SearchViewDialog extends SearchViewDialogSetting {
     }
 
     // Input Model
+    public <T> SearchViewDialog setItems(ArrayList<String> items) {
+        if (list==null)
+            list = new ArrayList<>();
+
+        this.listFromUser = items;
+        return this;
+    }
+
     public <T> SearchViewDialog setItems(T[] items) {
          return setItems(Arrays.asList(items));
     }
