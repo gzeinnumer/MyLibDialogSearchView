@@ -84,6 +84,7 @@ String[] arrayString = {"M", "Fadli", "Zein"};
 new SearchViewDialog<String>(getSupportFragmentManager())
         .setItems(arrayString);
 ```
+#
 **Type 2**
 ```java
 ArrayList<String> listString = new ArrayList<>();
@@ -91,6 +92,7 @@ listString.add("Lorem ipsum dolor");
 new SearchViewDialog<String>(getSupportFragmentManager())
         .setItems(listString);
 ```
+#
 **Type 3** for this type you should override function `toString()` in your `model pojo`
 ```java
 
