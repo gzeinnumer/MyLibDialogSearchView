@@ -18,18 +18,18 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class RvItemAdapter extends RecyclerView.Adapter implements Filterable, MyHolderSingle.OnItemSelectedListener {
+public class RvItemAdapterOld extends RecyclerView.Adapter implements Filterable, MyHolderSingleOld.OnItemSelectedListener {
 
     int TYPE;
     public ArrayList<SearchViewModel> list;
     public ArrayList<SearchViewModel> listFilter;
-    MyHolderSingle.OnItemSelectedListener listener;
+    MyHolderSingleOld.OnItemSelectedListener listener;
 
     public static int textColor = -100;
     public static int textSize = -100;
 
-    public RvItemAdapter(int type, MyHolderSingle.OnItemSelectedListener listener,
-                          List<SearchViewModel> items) {
+    public RvItemAdapterOld(int type, MyHolderSingleOld.OnItemSelectedListener listener,
+                            List<SearchViewModel> items) {
         this.TYPE = type;
         this.listener = listener;
 
@@ -42,14 +42,14 @@ public class RvItemAdapter extends RecyclerView.Adapter implements Filterable, M
 
     @NonNull
     @Override
-    public MyHolderSingle onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyHolderSingleOld onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_rv_single, parent, false);
-        return new MyHolderSingle(itemView, this);
+        return new MyHolderSingleOld(itemView, this);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
-        ((MyHolderSingle) viewHolder).bind(TYPE,list.get(position));
+        ((MyHolderSingleOld) viewHolder).bind(TYPE,list.get(position));
     }
 
     public List<SearchViewModel> getSelectedItems() {
@@ -71,10 +71,10 @@ public class RvItemAdapter extends RecyclerView.Adapter implements Filterable, M
     @Override
     public int getItemViewType(int position) {
         if(TYPE != SelectType.TYPE_SINGLE){
-            return MyHolderSingle.MULTI_SELECTION;
+            return MyHolderSingleOld.MULTI_SELECTION;
         }
         else{
-            return MyHolderSingle.SINGLE_SELECTION;
+            return MyHolderSingleOld.SINGLE_SELECTION;
         }
     }
 

@@ -14,7 +14,7 @@ import com.gzeinnumer.mylibsearchviewdialog.R;
 import com.gzeinnumer.mylibsearchviewdialog.constant.SelectType;
 import com.gzeinnumer.mylibsearchviewdialog.model.SearchViewModel;
 
-public class MyHolderSingle extends RecyclerView.ViewHolder {
+public class MyHolderSingleOld extends RecyclerView.ViewHolder {
 
     public static final int MULTI_SELECTION = 2;
     public static final int SINGLE_SELECTION = 1;
@@ -23,7 +23,7 @@ public class MyHolderSingle extends RecyclerView.ViewHolder {
     LinearLayout parent;
     OnItemSelectedListener itemSelectedListener;
 
-    public MyHolderSingle(@NonNull View view, OnItemSelectedListener listener) {
+    public MyHolderSingleOld(@NonNull View view, OnItemSelectedListener listener) {
         super(view);
         itemSelectedListener = listener;
 
@@ -55,11 +55,11 @@ public class MyHolderSingle extends RecyclerView.ViewHolder {
 
     public void bind(int TYPE, SearchViewModel data) {
 
-        if (RvItemAdapter.textColor != -100)
-            textView.setTextColor(RvItemAdapter.textColor);
+        if (RvItemAdapterOld.textColor != -100)
+            textView.setTextColor(RvItemAdapterOld.textColor);
 
-        if (RvItemAdapter.textSize != -100)
-            textView.setTextSize((float) RvItemAdapter.textSize);
+        if (RvItemAdapterOld.textSize != -100)
+            textView.setTextSize((float) RvItemAdapterOld.textSize);
 
         textView.setText( data.getName());
         TypedValue value = new TypedValue();
