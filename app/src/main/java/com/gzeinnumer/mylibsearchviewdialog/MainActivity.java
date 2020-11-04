@@ -10,7 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gzeinnumer.mylibsearchviewdialog.constant.ButtonStyle;
-import com.gzeinnumer.mylibsearchviewdialog.dialog.searchViewDialog.SearchViewDialog;
+import com.gzeinnumer.mylibsearchviewdialog.dialog.searchViewDialog.SearchViewDialogOldOld;
+import com.gzeinnumer.mylibsearchviewdialog.dialog.searchViewDialogNew.SearchViewDialog;
 import com.gzeinnumer.mylibsearchviewdialog.model.SearchViewModel;
 
 import java.util.ArrayList;
@@ -57,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
 //                initDialogMulti();
 //                initDialogSingleCustom();
 //                initDialogMultiCustom();
-                initDialogSingleEgi10();
+//                initDialogSingleEgi10();
+//                initDialogSingleGZeinNumer();
+                initDialogSingleGZeinNumer2();
             }
         });
     }
@@ -65,12 +68,12 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Main_Activity";
 
     private void initDialogSingle() {
-        new SearchViewDialog(getSupportFragmentManager(), listString)
+        new SearchViewDialogOldOld(getSupportFragmentManager(), listString)
                 .setTitle("ini title")
                 .setContent("ini content")
                 .setButtonStyle(ButtonStyle.ButtonContained)
                 .setButtonColor(R.color.amber_200)
-                .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle() {
+                .onOkPressedCallBackSingle(new SearchViewDialogOldOld.OnOkPressedSingle() {
                     @Override
                     public void onOkSingle(int position, String value) {
                         String temp = "Single Select :\n\n";
@@ -81,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, temp, Toast.LENGTH_SHORT).show();
                     }
                 })
-                .onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed() {
+                .onCancelPressedCallBack(new SearchViewDialogOldOld.OnCancelPressed() {
                     @Override
                     public void onCancelPressed() {
                         Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
@@ -91,11 +94,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDialogMulti() {
-        new SearchViewDialog(getSupportFragmentManager(), listString)
+        new SearchViewDialogOldOld(getSupportFragmentManager(), listString)
                 .enableFullScreen()
                 .setTitle("ini title")
                 .setContent("ini content")
-                .onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti(){
+                .onOkPressedCallBackMulti(new SearchViewDialogOldOld.OnOkPressedMulti(){
                     @Override
                     public void onOkMulti(List<SearchViewModel> data) {
                         String temp = "Multi Select :\n";
@@ -107,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                         tv.setText(temp);
                     }
                 })
-                .onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed() {
+                .onCancelPressedCallBack(new SearchViewDialogOldOld.OnCancelPressed() {
                     @Override
                     public void onCancelPressed() {
                         Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
@@ -117,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDialogSingleCustom() {
-        new SearchViewDialog(getSupportFragmentManager(), listString)
+        new SearchViewDialogOldOld(getSupportFragmentManager(), listString)
                 .setCanvasWidth(1.0)
                 .setDialogCanvas(getResources().getDrawable(R.drawable.rounded_corner_2))
 
@@ -164,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
                 .setTextListColor(getResources().getColor(R.color.colorAccent))
 //                .setTextListColor(Color.parseColor("#03DAC5"))
 
-                .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle() {
+                .onOkPressedCallBackSingle(new SearchViewDialogOldOld.OnOkPressedSingle() {
                     @Override
                     public void onOkSingle(int position, String value) {
                         String temp = "Single Select :\n\n";
@@ -175,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, temp, Toast.LENGTH_SHORT).show();
                     }
                 })
-                .onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed() {
+                .onCancelPressedCallBack(new SearchViewDialogOldOld.OnCancelPressed() {
                     @Override
                     public void onCancelPressed() {
                         Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
@@ -186,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDialogMultiCustom() {
-        new SearchViewDialog(getSupportFragmentManager(), listString)
+        new SearchViewDialogOldOld(getSupportFragmentManager(), listString)
                 .setCanvasWidth(1.0)
                 .setDialogCanvas(getResources().getDrawable(R.drawable.rounded_corner_2))
 
@@ -232,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
                 .setTextListColor(getResources().getColor(R.color.colorAccent))
 //                .setTextListColor(Color.parseColor("#03DAC5"))
 
-                .onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti(){
+                .onOkPressedCallBackMulti(new SearchViewDialogOldOld.OnOkPressedMulti(){
                     @Override
                     public void onOkMulti(List<SearchViewModel> data) {
                         String temp = "Multi Select :\n";
@@ -244,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
                         tv.setText(temp);
                     }
                 })
-                .onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed() {
+                .onCancelPressedCallBack(new SearchViewDialogOldOld.OnCancelPressed() {
                     @Override
                     public void onCancelPressed() {
                         Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
@@ -261,7 +264,7 @@ public class MainActivity extends AppCompatActivity {
         listObject.add(new ExampleModel(4, "Zein4", "Balbar4"));
 
         String[] arrayString = {"M", "Fadli", "Zein"};
-        new SearchViewDialog(getSupportFragmentManager(),listString)
+        new SearchViewDialogOldOld(getSupportFragmentManager(),listString)
 //                .setItems(listString)
 //                .setItems(listObject)
 //                .setItems(arrayString)
@@ -269,7 +272,7 @@ public class MainActivity extends AppCompatActivity {
                 .setContent("ini content")
                 .setButtonStyle(ButtonStyle.ButtonContained)
                 .setButtonColor(R.color.amber_200)
-                .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle() {
+                .onOkPressedCallBackSingle(new SearchViewDialogOldOld.OnOkPressedSingle() {
                     @Override
                     public void onOkSingle(int position, String value) {
                         String temp = "Single Select :\n\n";
@@ -278,6 +281,84 @@ public class MainActivity extends AppCompatActivity {
 
                         tv.setText(temp);
                         Toast.makeText(MainActivity.this, temp, Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .onCancelPressedCallBack(new SearchViewDialogOldOld.OnCancelPressed() {
+                    @Override
+                    public void onCancelPressed() {
+                        Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .show();
+    }
+
+
+    private void initDialogSingleGZeinNumer() {
+
+        String[] arrayString = {"M", "Fadli", "Zein"};
+        new SearchViewDialog<String>(getSupportFragmentManager())
+                .setItems(arrayString)
+                .setTitle("ini title")
+                .setContent("ini content")
+                .setButtonStyle(ButtonStyle.ButtonContained)
+                .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle<String>() {
+                    @Override
+                    public void onOkSingle(String data) {
+                        String temp = "Single Select : \n"+data.toString();
+                        tv.setText(temp);
+                    }
+                })
+                .onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti<String>() {
+                    @Override
+                    public void onOkMulti(List<String> data) {
+                        String temp = "Multi Select :\n";
+                        temp = temp + "Total Data => "+data.size()+"\n\n";
+                        for (String d: data){
+                            temp = temp + "Value => "+ d +"\n";
+                        }
+                        tv.setText(temp);
+                    }
+                })
+                .onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed() {
+                    @Override
+                    public void onCancelPressed() {
+                        Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .show();
+    }
+
+
+
+    private void initDialogSingleGZeinNumer2() {
+        ArrayList<ExampleModel> listObject = new ArrayList<>();
+        listObject.add(new ExampleModel(1, "Zein", "Balbar"));
+        listObject.add(new ExampleModel(2, "Zein2", "Balbar2"));
+        listObject.add(new ExampleModel(3, "Zein3", "Balbar3"));
+        listObject.add(new ExampleModel(4, "Zein4", "Balbar4"));
+
+        new SearchViewDialog<ExampleModel>(getSupportFragmentManager())
+                .setItems(listObject)
+                .setTitle("ini title")
+                .setContent("ini content")
+                .setButtonStyle(ButtonStyle.ButtonContained)
+                .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle<ExampleModel>() {
+                    @Override
+                    public void onOkSingle(ExampleModel data) {
+                        String temp = "Single Select : \n"+data.toString();
+                        tv.setText(temp);
+                    }
+                })
+                .onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti<ExampleModel>() {
+                    @Override
+                    public void onOkMulti(List<ExampleModel> data) {
+                        String temp = "Multi Select :\n";
+                        temp = temp + "Total Data => "+data.size()+"\n\n";
+                        for (ExampleModel d: data){
+                            temp = temp + "Value => "+d.getName()+"\n";
+                            temp = temp + "Value => "+d.getAddress()+"\n";
+                        }
+                        tv.setText(temp);
                     }
                 })
                 .onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed() {

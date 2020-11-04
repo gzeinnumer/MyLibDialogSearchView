@@ -80,14 +80,14 @@ Dialog with **1 Title, 1 Content, 1 EditText, 1 RecyclerView, 1 Negative Button,
 **Type 1**
 ```java
 String[] arrayString = {"M", "Fadli", "Zein"};
-new SearchViewDialog(getSupportFragmentManager())
+new SearchViewDialog<String>(getSupportFragmentManager())
         .setItems(arrayString);
 ```
 **Type 2**
 ```java
 ArrayList<String> listString = new ArrayList<>();
 listString.add("Lorem ipsum dolor");
-new SearchViewDialog(getSupportFragmentManager())
+new SearchViewDialog<String>(getSupportFragmentManager())
         .setItems(listString);
 ```
 **Type 3** for this type you should override function `toString()` in your `model pojo`
@@ -114,14 +114,45 @@ public class ExampleModel {
     }
 }
 ```
+And dont forget to declare your `model pojo` after `SearchViewDialog<ModelPojo>`
 ```java
 ArrayList<ExampleModel> listObject = new ArrayList<>();
 listObject.add(new ExampleModel(1, "Zein", "Balbar"));
-new SearchViewDialog(getSupportFragmentManager())
+
+new SearchViewDialog<ExampleModel>(getSupportFragmentManager())
         .setItems(listObject);
 ```
+use your `model pojo` to `callBack function`. Example `new SearchViewDialog.OnOkPressedSingle<ExampleModel>(){}` of `new SearchViewDialog.OnOkPressedMulti<ExampleModel>(){}`
+```java
+//For Single
+new SearchViewDialog<ExampleModel>(getSupportFragmentManager())
+    .setItems(listObject)
+    .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle<ExampleModel>() {
+        @Override
+        public void onOkSingle(ExampleModel data) {
+            String temp = "Single Select : \n"+data.toString();
+            tv.setText(temp);
+        }
+    });
 
-- **Single Item Select**. Use `onOkPressedCallBackSingle` to enable `Multi Select Item`.
+//For Multi
+new SearchViewDialog<ExampleModel>(getSupportFragmentManager())
+    .setItems(listObject)
+    .onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti<ExampleModel>() {
+        @Override
+        public void onOkMulti(List<ExampleModel> data) {
+            String temp = "Multi Select :\n";
+            temp = temp + "Total Data => "+data.size()+"\n\n";
+            for (ExampleModel d: data){
+                temp = temp + "Value => "+d.getName()+"\n";
+                temp = temp + "Value => "+d.getAddress()+"\n";
+            }
+            tv.setText(temp);
+        }
+    });
+```
+
+- **Single Item Select**. Use `onOkPressedCallBackSingle` to enable `Single Select Item`.
 **Code** :
 ```java
 ArrayList<String> list = new ArrayList<>();
@@ -129,19 +160,15 @@ list.add("Lorem ipsum dolor");
 list.add("sit amet, consectetur");
 list.add("adipiscing elit sed do");
 
-new SearchViewDialog(getSupportFragmentManager())
+new SearchViewDialog<String>(getSupportFragmentManager())
     .setItems(list)
     .setTitle("ini title")
     .setContent("ini content")
-    .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle() {
+    .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle<String>() {
         @Override
-        public void onOkSingle(int position, String value) {
-            String temp = "Single Select :\n\n";
-            temp = temp+"position on list => "+position+"\n";
-            temp = temp+"value on list => "+value+"\n";
-
+        public void onOkSingle(String data) {
+            String temp = "Single Select : \n"+data.toString();
             tv.setText(temp);
-            Toast.makeText(MainActivity.this, temp, Toast.LENGTH_SHORT).show();
         }
     })
     .onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed() {
@@ -165,14 +192,13 @@ new SearchViewDialog(getSupportFragmentManager())
     .setItems(list)
     .setTitle("ini title")
     .setContent("ini content")
-    .onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti(){
+    .onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti<String>() {
         @Override
-        public void onOkMulti(List<SearchViewModel> data) {
+        public void onOkMulti(List<String> data) {
             String temp = "Multi Select :\n";
             temp = temp + "Total Data => "+data.size()+"\n\n";
-            for (SearchViewModel d: data){
-                temp = temp + "position on list => "+d.getPosition()+"\n";
-                temp = temp + "value on list => "+d.getName()+"\n\n";
+            for (String d: data){
+                temp = temp + "Value => "+ d +"\n";
             }
             tv.setText(temp);
         }

@@ -13,7 +13,7 @@ import com.gzeinnumer.mylibsearchviewdialog.model.SearchViewModel;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-public class SearchViewDialog extends SearchViewDialogSetting {
+public class SearchViewDialogOldOld extends SearchViewDialogSettingOld {
 
     public static final String TAG = "CustomDialog";
 
@@ -26,7 +26,7 @@ public class SearchViewDialog extends SearchViewDialogSetting {
      *     .setItems(listString)"
      */
     @Deprecated
-    public SearchViewDialog(FragmentManager context, ArrayList<String> list) {
+    public SearchViewDialogOldOld(FragmentManager context, ArrayList<String> list) {
         this._context = context;
 
         if (list==null)
@@ -35,23 +35,23 @@ public class SearchViewDialog extends SearchViewDialogSetting {
         this.listFromUser = list;
 
         _transaction = _context.beginTransaction();
-        Fragment previous = _context.findFragmentByTag(SearchViewDialog.TAG);
+        Fragment previous = _context.findFragmentByTag(SearchViewDialogOldOld.TAG);
         if (previous != null) {
             _transaction.remove(previous);
         }
     }
 
-    public SearchViewDialog(FragmentManager _context) {
+    public SearchViewDialogOldOld(FragmentManager _context) {
         this._context = _context;
         _transaction = _context.beginTransaction();
-        Fragment previous = _context.findFragmentByTag(SearchViewDialog.TAG);
+        Fragment previous = _context.findFragmentByTag(SearchViewDialogOldOld.TAG);
         if (previous != null) {
             _transaction.remove(previous);
         }
     }
 
     // Input Model
-    public <T> SearchViewDialog setItems(ArrayList<String> items) {
+    public <T> SearchViewDialogOldOld setItems(ArrayList<String> items) {
         if (list==null)
             list = new ArrayList<>();
 
@@ -59,11 +59,11 @@ public class SearchViewDialog extends SearchViewDialogSetting {
         return this;
     }
 
-    public <T> SearchViewDialog setItems(T[] items) {
-         return setItems(Arrays.asList(items));
+    public <T> SearchViewDialogOldOld setItems(T[] items) {
+        return setItems(Arrays.asList(items));
     }
 
-    public <T> SearchViewDialog setItems(List<T> items) {
+    public <T> SearchViewDialogOldOld setItems(List<T> items) {
         for (int i = 0; i < items.size(); i++) {
             this.listFromUser.add(items.get(i).toString());
         }
@@ -71,169 +71,169 @@ public class SearchViewDialog extends SearchViewDialogSetting {
     }
 
     //CANVAS
-    public SearchViewDialog setDialogCanvas(Drawable resource) {
+    public SearchViewDialogOldOld setDialogCanvas(Drawable resource) {
         this.shapeCanvas = resource;
         return this;
     }
 
     //TITLE
-    public SearchViewDialog setTitle(String title) {
+    public SearchViewDialogOldOld setTitle(String title) {
         this.tvTitleValue = title;
         return this;
     }
-    public SearchViewDialog setTitleSize(int size) {
+    public SearchViewDialogOldOld setTitleSize(int size) {
         this.tvTitleSize = size;
         return this;
     }
-    public SearchViewDialog setTitleColor(int color) {
+    public SearchViewDialogOldOld setTitleColor(int color) {
         this.tvTitleColor = color;
         return this;
     }
-    public SearchViewDialog setTitleAlignment(int alignment) {
+    public SearchViewDialogOldOld setTitleAlignment(int alignment) {
         this.tvTitleAlignment = alignment;
         return this;
     }
 
     //CONTENT
-    public SearchViewDialog setContent(String title) {
+    public SearchViewDialogOldOld setContent(String title) {
         this.tvContentValue = title;
         return this;
     }
-    public SearchViewDialog setContentSize(int size) {
+    public SearchViewDialogOldOld setContentSize(int size) {
         this.tvContentSize = size;
         return this;
     }
-    public SearchViewDialog setContentColor(int color) {
+    public SearchViewDialogOldOld setContentColor(int color) {
         this.tvContentColor = color;
         return this;
     }
-    public SearchViewDialog setContentAlignment(int alignment) {
+    public SearchViewDialogOldOld setContentAlignment(int alignment) {
         this.tvContentAlignment = alignment;
         return this;
     }
 
     //CANCEL
-    public SearchViewDialog setBtnCancelTitle(String title) {
+    public SearchViewDialogOldOld setBtnCancelTitle(String title) {
         this.dBtnCancelValue = title;
         return this;
     }
-    public SearchViewDialog setBtnCancelTitleColor(int color) {
+    public SearchViewDialogOldOld setBtnCancelTitleColor(int color) {
         this.btnTextColorCancel = color;
         return this;
     }
 
     //CANCEL ICON
-    public SearchViewDialog setCancelIconLeft(int icon) {
+    public SearchViewDialogOldOld setCancelIconLeft(int icon) {
         this.cancelIconL = icon;
         return this;
     }
-    public SearchViewDialog setCancelIconTop(int icon) {
+    public SearchViewDialogOldOld setCancelIconTop(int icon) {
         this.cancelIconT = icon;
         return this;
     }
-    public SearchViewDialog setCancelIconRight(int icon) {
+    public SearchViewDialogOldOld setCancelIconRight(int icon) {
         this.cancelIconR = icon;
         return this;
     }
-    public SearchViewDialog setCancelIconBottom(int icon) {
+    public SearchViewDialogOldOld setCancelIconBottom(int icon) {
         this.cancelIconB = icon;
         return this;
     }
 
     //OK
-    public SearchViewDialog setBtnOkTitle(String title) {
+    public SearchViewDialogOldOld setBtnOkTitle(String title) {
         this.dBtnOkValue = title;
         return this;
     }
-    public SearchViewDialog setBtnOkTitleColor(int color) {
+    public SearchViewDialogOldOld setBtnOkTitleColor(int color) {
         this.btnTextColorOk = color;
         return this;
     }
 
     //OK ICON
-    public SearchViewDialog setOkIconLeft(int icon) {
+    public SearchViewDialogOldOld setOkIconLeft(int icon) {
         this.okIconL = icon;
         return this;
     }
-    public SearchViewDialog setOkIconTop(int icon) {
+    public SearchViewDialogOldOld setOkIconTop(int icon) {
         this.okIconT = icon;
         return this;
     }
-    public SearchViewDialog setOkIconRight(int icon) {
+    public SearchViewDialogOldOld setOkIconRight(int icon) {
         this.okIconR = icon;
         return this;
     }
-    public SearchViewDialog setOkIconBottom(int icon) {
+    public SearchViewDialogOldOld setOkIconBottom(int icon) {
         this.okIconB = icon;
         return this;
     }
 
     //BUTTON STYLE
-    public SearchViewDialog setButtonStyle(ButtonStyle style) {
+    public SearchViewDialogOldOld setButtonStyle(ButtonStyle style) {
         this.btnStyle = style;
         return this;
     }
-    public SearchViewDialog setButtonTextSize(int size) {
+    public SearchViewDialogOldOld setButtonTextSize(int size) {
         this.dBtnTextSize = size;
         return this;
     }
-    public SearchViewDialog setButtonGravity(int gravity) {
+    public SearchViewDialogOldOld setButtonGravity(int gravity) {
         this.buttonGravity = gravity;
         return this;
     }
 
     //ACTION CALLBACK
-    public SearchViewDialog onCancelPressedCallBack(OnCancelPressed callBack) {
+    public SearchViewDialogOldOld onCancelPressedCallBack(OnCancelPressed callBack) {
         this.onCancelPressed = callBack;
         return this;
     }
-    public SearchViewDialog onOkPressedCallBackSingle(OnOkPressedSingle callBack) {
+    public SearchViewDialogOldOld onOkPressedCallBackSingle(OnOkPressedSingle callBack) {
         this.type = SelectType.TYPE_SINGLE;
         this.onOkPressedSingle = callBack;
         return this;
     }
-    public SearchViewDialog onOkPressedCallBackMulti(OnOkPressedMulti callBack) {
+    public SearchViewDialogOldOld onOkPressedCallBackMulti(OnOkPressedMulti callBack) {
         this.type = SelectType.TYPE_MULTI;
         this.onOkPressedMulti = callBack;
         return this;
     }
 
-    public SearchViewDialog setContentListHeight(int listHeight) {
+    public SearchViewDialogOldOld setContentListHeight(int listHeight) {
         this.listHeight = listHeight;
         return this;
     }
 
-    public SearchViewDialog setTextListColor(int color) {
+    public SearchViewDialogOldOld setTextListColor(int color) {
         this.textListColor = color;
         return this;
     }
 
-    public SearchViewDialog setTextListSize(int size) {
+    public SearchViewDialogOldOld setTextListSize(int size) {
         this.textListSize = size;
         return this;
     }
 
-    public SearchViewDialog setTextSearchSize(int size) {
+    public SearchViewDialogOldOld setTextSearchSize(int size) {
         this.textSearchSize = size;
         return this;
     }
 
-    public SearchViewDialog setTextSearchColor(int color) {
+    public SearchViewDialogOldOld setTextSearchColor(int color) {
         this.textSearchColor = color;
         return this;
     }
 
-    public SearchViewDialog setCanvasWidth(double size) {
+    public SearchViewDialogOldOld setCanvasWidth(double size) {
         this.canvasWidth = size;
         return this;
     }
 
-    public SearchViewDialog enableFullScreen() {
+    public SearchViewDialogOldOld enableFullScreen() {
         this.isFullScreen = true;
         return this;
     }
 
-    public SearchViewDialog setButtonColor(int color) {
+    public SearchViewDialogOldOld setButtonColor(int color) {
         this.buttonColor = color;
         return this;
     }
@@ -252,6 +252,6 @@ public class SearchViewDialog extends SearchViewDialogSetting {
     }
 
     public void show() {
-        this.show(_transaction, SearchViewDialog.TAG);
+        this.show(_transaction, SearchViewDialogOldOld.TAG);
     }
 }

@@ -7,7 +7,6 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,19 +21,19 @@ import com.gzeinnumer.mylibsearchviewdialog.R;
 import com.gzeinnumer.mylibsearchviewdialog.constant.ButtonStyle;
 import com.gzeinnumer.mylibsearchviewdialog.constant.SelectType;
 import com.gzeinnumer.mylibsearchviewdialog.dialog.BaseDialog;
-import com.gzeinnumer.mylibsearchviewdialog.dialog.searchViewDialog.adapter.MyHolderSingle;
-import com.gzeinnumer.mylibsearchviewdialog.dialog.searchViewDialog.adapter.RvItemAdapter;
+import com.gzeinnumer.mylibsearchviewdialog.dialog.searchViewDialog.adapter.MyHolderSingleOld;
+import com.gzeinnumer.mylibsearchviewdialog.dialog.searchViewDialog.adapter.RvItemAdapterOld;
 import com.gzeinnumer.mylibsearchviewdialog.model.SearchViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchViewDialogSetting extends BaseDialog implements MyHolderSingle.OnItemSelectedListener {
+public class SearchViewDialogSettingOld extends BaseDialog implements MyHolderSingleOld.OnItemSelectedListener {
 
-    protected SearchViewDialog.OnCancelPressed onCancelPressed;
+    protected SearchViewDialogOldOld.OnCancelPressed onCancelPressed;
 
-    protected SearchViewDialog.OnOkPressedSingle onOkPressedSingle;
-    protected SearchViewDialog.OnOkPressedMulti onOkPressedMulti;
+    protected SearchViewDialogOldOld.OnOkPressedSingle onOkPressedSingle;
+    protected SearchViewDialogOldOld.OnOkPressedMulti onOkPressedMulti;
     protected int buttonColor = 0;
 
     private View _view;
@@ -86,7 +85,7 @@ public class SearchViewDialogSetting extends BaseDialog implements MyHolderSingl
 
     protected ArrayList<String> listFromUser = new ArrayList<>();
     protected ArrayList<SearchViewModel> list = new ArrayList<>();
-    private RvItemAdapter _adapter;
+    private RvItemAdapterOld _adapter;
 
     protected int textListColor = -100;
     protected int textSearchColor = -100;
@@ -225,7 +224,7 @@ public class SearchViewDialogSetting extends BaseDialog implements MyHolderSingl
             for (int i = 0; i<listFromUser.size(); i++){
                 list.add(new SearchViewModel(i, listFromUser.get(i)));
             }
-            _adapter = new RvItemAdapter(type, this, list);
+            _adapter = new RvItemAdapterOld(type, this, list);
 
             if (textListColor != -100)
                 _adapter.setTextItemColor(textListColor);
