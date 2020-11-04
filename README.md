@@ -252,7 +252,7 @@ dialog.show();
 | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_5.jpg" /> | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_7.jpg"/> |
 |:------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
 | `Multi Select Item` Preview, you can select more than **1** Item                                                  | Click `OK` and call function `onOkPressedCallBackMulti`                                                          |
-
+#
 #### SearchViewDialog -> Customize
 
 <p align="center">
