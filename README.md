@@ -84,6 +84,7 @@ String[] arrayString = {"M", "Fadli", "Zein"};
 new SearchViewDialog<String>(getSupportFragmentManager())
         .setItems(arrayString);
 ```
+#
 **Type 2**
 ```java
 ArrayList<String> listString = new ArrayList<>();
@@ -91,6 +92,7 @@ listString.add("Lorem ipsum dolor");
 new SearchViewDialog<String>(getSupportFragmentManager())
         .setItems(listString);
 ```
+#
 **Type 3** for this type you should override function `toString()` in your `model pojo`
 ```java
 
@@ -250,7 +252,7 @@ dialog.show();
 | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_5.jpg" /> | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_7.jpg"/> |
 |:------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
 | `Multi Select Item` Preview, you can select more than **1** Item                                                  | Click `OK` and call function `onOkPressedCallBackMulti`                                                          |
-
+#
 #### SearchViewDialog -> Customize
 
 <p align="center">
