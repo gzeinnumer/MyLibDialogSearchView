@@ -122,7 +122,7 @@ listObject.add(new ExampleModel(1, "Zein", "Balbar"));
 new SearchViewDialog<ExampleModel>(getSupportFragmentManager())
         .setItems(listObject);
 ```
-use your `model pojo` to `callBack function`. Example `new SearchViewDialog.OnOkPressedSingle<ExampleModel>(){}` of `new SearchViewDialog.OnOkPressedMulti<ExampleModel>(){}`
+use your `model pojo` to `callBack function`. Example `new SearchViewDialog.OnOkPressedSingle<ExampleModel>(){}` or `new SearchViewDialog.OnOkPressedMulti<ExampleModel>(){}`
 ```java
 //For Single
 new SearchViewDialog<ExampleModel>(getSupportFragmentManager())
@@ -131,6 +131,8 @@ new SearchViewDialog<ExampleModel>(getSupportFragmentManager())
         @Override
         public void onOkSingle(ExampleModel data) {
             String temp = "Single Select : \n"+data.toString();
+            String temp = "Single Select : \n"+data.getName();
+            String temp = "Single Select : \n"+data.getAddress();
             tv.setText(temp);
         }
     });
@@ -188,7 +190,7 @@ list.add("Lorem ipsum dolor");
 list.add("sit amet, consectetur");
 list.add("adipiscing elit sed do");
 
-new SearchViewDialog(getSupportFragmentManager())
+new SearchViewDialog<String>(getSupportFragmentManager())
     .setItems(list)
     .setTitle("ini title")
     .setContent("ini content")
@@ -215,19 +217,19 @@ new SearchViewDialog(getSupportFragmentManager())
 or you can write code like this :
 
 ```java
-SearchViewDialog dialog = new SearchViewDialog(getSupportFragmentManager())
+SearchViewDialog dialog = new SearchViewDialog<String>(getSupportFragmentManager())
     .setItems(list)
     .setTitle("ini title")
     .setContent("ini content");
 
-dialog.onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti(){
+dialog.onOkPressedCallBackMulti(new SearchViewDialog.OnOkPressedMulti<String>(){
     @Override
-    public void onOkMulti(List<SearchViewModel> data) {
+    public void onOkMulti(List<String> data) {
         
     }
 }).
 
-dialog.onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed() {
+dialog.onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed<String>() {
     @Override
     public void onCancelPressed() {
         Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
