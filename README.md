@@ -77,6 +77,7 @@ dependencies {
 ### SearchViewDialog
 Dialog with **1 Title, 1 Content, 1 EditText, 1 RecyclerView, 1 Negative Button, 1 Positive Button**. You can choise `Single Item Select` or `Multi Item Select`. The difference is only in `callback` function.
 - **Content Item** there is 3 type of is that you can sent to this dialog.
+
 **Type 1**
 ```java
 String[] arrayString = {"M", "Fadli", "Zein"};
@@ -153,7 +154,7 @@ new SearchViewDialog<ExampleModel>(getSupportFragmentManager())
         }
     });
 ```
-
+#
 - **Single Item Select**. Use `onOkPressedCallBackSingle` to enable `Single Select Item`.
 **Code** :
 ```java
@@ -181,7 +182,7 @@ new SearchViewDialog<String>(getSupportFragmentManager())
     })
     .show();
 ```
-
+#
 - **Multi Item Select**. Use `onOkPressedCallBackMulti` to enable `Multi Select Item`.
 **Code** :
 ```java
