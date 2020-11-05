@@ -61,7 +61,7 @@ public class MyHolderSingle<T> extends RecyclerView.ViewHolder {
         if (RvItemAdapter.textSize != -100)
             textView.setTextSize((float) RvItemAdapter.textSize);
 
-        textView.setText(data.toString());
+        textView.setText(String.valueOf(data.toString()));
         TypedValue value = new TypedValue();
 
         if (TYPE != SelectType.TYPE_SINGLE) {
