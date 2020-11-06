@@ -233,8 +233,6 @@ dialog.onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed<String>() {
 dialog.show();
 ```
 
-**FullCode [MainActivity](https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/app/src/main/java/com/gzeinnumer/mylibsearchviewdialog/MainActivity.java)**
-
 **Preview** :
 
 | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_2.jpg"/> | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_4.jpg"/> | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_6.jpg"/> |
@@ -253,6 +251,10 @@ dialog.show();
 </p>
 
 You can Customize your dialog UI. [**ReadMore**](https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/README_1.md).
+
+---
+
+**FullCode [MainActivity](https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/app/src/main/java/com/gzeinnumer/mylibsearchviewdialog/MainActivity.java)**
 
 ---
 
