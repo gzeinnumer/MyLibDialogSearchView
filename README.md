@@ -258,6 +258,17 @@ You can Customize your dialog UI. [**ReadMore**](https://github.com/gzeinnumer/M
 
 ---
 
+### Version
+- **2.0.3**
+  - First Release
+
+---
+
+### Contribution
+You can sent your constibution to `branche` `open-pull`.
+
+---
+
 ```
 Copyright 2020 M. Fadli Zein
 ```
