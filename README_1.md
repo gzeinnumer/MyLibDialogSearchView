@@ -198,6 +198,36 @@ Preview :
 
 ##
 
+**Animation Dialog Show** You can change dialog `animation`.
+
+**Code** :
+```java
+new SearchViewDialog(getSupportFragmentManager(), list)
+    .setAnimationStyle(R.style.CustomDialogStyle)
+    ...
+    .show();
+```
+Here is the style
+```xml
+<resources>
+
+    <!-- res->styles.xml -->
+    <style name="CustomDialogStyle" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+        <item name="android:windowEnterAnimation">@anim/anim_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_out</item>
+    </style>
+
+</resources>
+```
+Style that i prepare for you
+- [anim_in](https://github.com/gzeinnumer/MyLibDialogFragment/blob/master/lib/src/main/res/anim/anim_in.xml) & [anim_out](https://github.com/gzeinnumer/MyLibDialogFragment/blob/master/lib/src/main/res/anim/anim_out.xml).
+- [slide_down](https://github.com/gzeinnumer/MyLibDialogFragment/blob/master/lib/src/main/res/anim/slide_down.xml) & [slide_up](https://github.com/gzeinnumer/MyLibDialogFragment/blob/master/lib/src/main/res/anim/slide_up.xml).
+
+
+##
+
 [FullCode](https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/app/src/main/java/com/gzeinnumer/mylibsearchviewdialog/MainActivity.java) **Preview** :
 
 <p align="center">
