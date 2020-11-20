@@ -27,10 +27,18 @@ public abstract class BaseDialog extends DialogFragment {
     protected double canvasWidth = 0.9;
     protected boolean isFullScreen = false;
 
+    protected int animationStyle = R.style.DialogStyle_Slide;
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        getDialog().getWindow().getAttributes().windowAnimations = animationStyle;
+    }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setStyle(DialogFragment.STYLE_NO_TITLE, R.style.DialogStyle);
+        setStyle(DialogFragment.STYLE_NO_TITLE, animationStyle);
     }
 
     @Override

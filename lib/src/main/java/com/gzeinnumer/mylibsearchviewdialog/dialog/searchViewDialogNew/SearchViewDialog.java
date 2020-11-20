@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.gzeinnumer.mylibsearchviewdialog.constant.ButtonStyle;
 import com.gzeinnumer.mylibsearchviewdialog.constant.SelectType;
+import com.gzeinnumer.mylibsearchviewdialog.dialog.BaseDialog;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -48,6 +49,11 @@ public class SearchViewDialog<T> extends SearchViewDialogSetting<T> {
         if (previous != null) {
             _transaction.remove(previous);
         }
+    }
+
+    public SearchViewDialog setAnimationStyle(int animationStyle) {
+        this.animationStyle = animationStyle;
+        return this;
     }
 
     public SearchViewDialog setItems(T[] items) {
