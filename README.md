@@ -6,7 +6,7 @@
 </h1>
 
 <div align="center">
-    <a><img src="https://img.shields.io/badge/Version-2.0.2-brightgreen.svg?style=flat"></a>
+    <a><img src="https://img.shields.io/badge/Version-2.0.3-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
     <a><img src="https://img.shields.io/badge/Koltin-Suport-green?logo=kotlin&style=flat"></a>
@@ -17,42 +17,42 @@
 
 ---
 
-### Feature List
+## Download
+Add maven `jitpack.io` and `dependencies` in `build.gradle (Project)` :
+```gradle
+// build.gradle project
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+
+// build.gradle app/module
+dependencies {
+  ...
+  implementation 'com.github.gzeinnumer:MyLibDialogSearchView:version'
+  implementation 'com.google.android.material:material:1.2.0'
+}
+```
+
+## Feature List
 - [x] [Single Select](#searchviewdialog)
 - [x] [Multi Select](#searchviewdialog)
 - [x] [Filter](#searchviewdialog)
 
----
-
-### Tech stack and 3rd library
+## Tech stack and 3rd library
 - Material.io ([docs](https://material.io/develop/android/docs/getting-started))
 - Multi and Single Selection in Recyclerview ([docs](https://medium.com/@maydin/multi-and-single-selection-in-recyclerview-d29587a7dee2)) ([example](https://github.com/gzeinnumer/MultiandSingleSelectioninRecyclerView))
 - DialogFragment ([docs](https://developer.android.com/reference/android/app/DialogFragment))
 
 ---
 
-## Download
-Minimum Android SDK Version 21
+**Deprecated**
 
-#### Gradle
-**Step 1.** add maven `jitpack.io` to your `build.gradle` (Project) :
-```gradle
-allprojects {
-  repositories {
-    google()
-    jcenter()
-    maven { url 'https://jitpack.io' }
-  }
-}
-```
-
-**Step 2.** add dependensi to your `build.gradle` (Module) :
-```gradle
-dependencies {
-  implementation 'com.github.gzeinnumer:MyLibDialogSearchView:versi'
-  implementation 'com.google.android.material:material:1.2.0'
-}
-```
+| OLD                                                    | 1.0.3                                                             |2.0.0                                                             |
+|:-------------------------------------------------------|:----------------------------------------------------------------|:----------------------------------------------------------------|
+| `SearchViewDialog(getSupportFragmentManager(), list)`  | `SearchViewDialog(getSupportFragmentManager()) .setItems(list)` |`SearchViewDialog<ExampleModel>(getSupportFragmentManager()) .setItems(list)`|
 
 ---
 
@@ -65,18 +65,11 @@ dependencies {
 ```
 
 ---
-
-**Deprecated**
-
-| OLD                                                    | 1.0.3                                                             |2.0.0                                                             |
-|:-------------------------------------------------------|:----------------------------------------------------------------|:----------------------------------------------------------------|
-| `SearchViewDialog(getSupportFragmentManager(), list)`  | `SearchViewDialog(getSupportFragmentManager()) .setItems(list)` |`SearchViewDialog<ExampleModel>(getSupportFragmentManager()) .setItems(list)`|
-
----
+## USE
 
 ### SearchViewDialog
 Dialog with **1 Title, 1 Content, 1 EditText, 1 RecyclerView, 1 Negative Button, 1 Positive Button**. You can choise `Single Item Select` or `Multi Item Select`. The difference is only in `callback` function.
-- **Content Item** there is 3 type of is that you can sent to this dialog.
+- **Content Item** there is 3 types data that you can sent to this dialog.
 
 **Type 1**
 ```java
@@ -240,7 +233,7 @@ dialog.onCancelPressedCallBack(new SearchViewDialog.OnCancelPressed<String>() {
 dialog.show();
 ```
 
-[FullCode](https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/app/src/main/java/com/gzeinnumer/mylibsearchviewdialog/MainActivity.java) **Preview** :
+**Preview** :
 
 | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_2.jpg"/> | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_4.jpg"/> | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_6.jpg"/> |
 |:-----------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
@@ -250,7 +243,7 @@ dialog.show();
 | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_5.jpg" /> | <img src="https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/preview/MyLibDialogSearchView_7.jpg"/> |
 |:------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
 | `Multi Select Item` Preview, you can select more than **1** Item                                                  | Click `OK` and call function `onOkPressedCallBackMulti`                                                          |
-
+#
 #### SearchViewDialog -> Customize
 
 <p align="center">
@@ -258,6 +251,21 @@ dialog.show();
 </p>
 
 You can Customize your dialog UI. [**ReadMore**](https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/README_1.md).
+
+---
+
+**FullCode [MainActivity](https://github.com/gzeinnumer/MyLibDialogSearchView/blob/master/app/src/main/java/com/gzeinnumer/mylibsearchviewdialog/MainActivity.java)**
+
+---
+
+### Version
+- **2.0.3**
+  - First Release
+
+---
+
+### Contribution
+You can sent your constibution to `branche` `open-pull`.
 
 ---
 
