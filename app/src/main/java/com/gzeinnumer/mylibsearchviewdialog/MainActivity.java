@@ -1,13 +1,13 @@
 package com.gzeinnumer.mylibsearchviewdialog;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.gzeinnumer.mylibsearchviewdialog.constant.ButtonStyle;
 import com.gzeinnumer.mylibsearchviewdialog.dialog.searchViewDialog.SearchViewDialogOldOld;
@@ -304,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
                 .onOkPressedCallBackSingle(new SearchViewDialog.OnOkPressedSingle<String>() {
                     @Override
                     public void onOkSingle(String data) {
-                        String temp = "Single Select : \n"+data.toString();
+                        String temp = "Single Select : \n" + data;
                         tv.setText(temp);
                     }
                 })
@@ -338,7 +338,7 @@ public class MainActivity extends AppCompatActivity {
         listObject.add(new ExampleModel(4, "Zein4", "Balbar4"));
 
         new SearchViewDialog<ExampleModel>(getSupportFragmentManager())
-                .setAnimationStyle(R.style.DialogStyle_In)
+                .setAnimationStyle(R.style.LibSearchViewDialog_DialogStyle_In)
                 .setItems(listObject)
                 .setTitle("ini title")
                 .setContent("ini content")

@@ -1,45 +1,46 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="LibSearchViewDialog_AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppTheme2" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+    <style name="LibSearchViewDialog_AppTheme2" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/green_600</item>
         <item name="colorPrimaryDark">@color/deep_orange_700</item>
         <item name="colorAccent">@color/lime_A100</item>
     </style>
-    <style name="DialogStyle" parent="Theme.MaterialComponents.Light.Dialog">
+
+    <style name="LibSearchViewDialog_DialogStyle" parent="Theme.MaterialComponents.Light.Dialog">
         <item name="android:windowMinWidthMajor">80%</item>
         <item name="android:windowMinWidthMinor">80%</item>
     </style>
 
-    <style name="DialogStyle_In" parent="Theme.MaterialComponents.Light.Dialog">
+    <style name="LibSearchViewDialog_DialogStyle_In" parent="Theme.MaterialComponents.Light.Dialog">
         <item name="android:windowMinWidthMajor">80%</item>
         <item name="android:windowMinWidthMinor">80%</item>
         <item name="android:windowEnterAnimation">@anim/anim_in</item>
         <item name="android:windowExitAnimation">@anim/anim_out</item>
     </style>
 
-    <style name="DialogStyle_Slide" parent="Theme.MaterialComponents.Light.Dialog">
+    <style name="LibSearchViewDialog_DialogStyle_Slide" parent="Theme.MaterialComponents.Light.Dialog">
         <item name="android:windowMinWidthMajor">80%</item>
         <item name="android:windowMinWidthMinor">80%</item>
         <item name="android:windowEnterAnimation">@anim/slide_up</item>
         <item name="android:windowExitAnimation">@anim/slide_down</item>
     </style>
 
-    <style name="MyDivider">
+    <style name="LibSearchViewDialog_MyDivider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
         <item name="android:layout_marginTop">@dimen/text_margin</item>
         <item name="android:background">@color/divider</item>
     </style>
 
-    <style name="MyTextHeader">
+    <style name="LibSearchViewDialog_MyTextHeader">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:alpha">1</item>
@@ -49,7 +50,7 @@
         <item name="android:layout_marginTop">@dimen/text_margin</item>
     </style>
 
-    <style name="MyTextContent">
+    <style name="LibSearchViewDialog_MyTextContent">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:alpha">1</item>
@@ -57,34 +58,34 @@
         <item name="android:textSize">@dimen/h3</item>
     </style>
 
-    <style name="MyButtonText" parent="Widget.MaterialComponents.Button.TextButton">
+    <style name="LibSearchViewDialog_MyButtonText" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:layout_height">@dimen/button_height</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
-    <style name="MyButtonOutlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <style name="LibSearchViewDialog_MyButtonOutlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:layout_height">@dimen/button_height</item>
         <item name="android:layout_width">wrap_content</item>
     </style>
 
-    <style name="MyButtonContained">
+    <style name="LibSearchViewDialog_MyButtonContained">
         <item name="android:layout_height">@dimen/button_height</item>
         <item name="android:layout_width">wrap_content</item>
     </style>
 
-    <style name="MyButtonIcon" parent="Widget.MaterialComponents.Button.Icon">
+    <style name="LibSearchViewDialog_MyButtonIcon" parent="Widget.MaterialComponents.Button.Icon">
         <item name="android:layout_height">@dimen/button_height</item>
         <item name="android:layout_width">wrap_content</item>
     </style>
 
-    <style name="MyTextInputLayoutOutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <style name="LibSearchViewDialog_MyTextInputLayoutOutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/space_between_edittext</item>
     </style>
 
-    <style name="MyTextInputEditText">
+    <style name="LibSearchViewDialog_MyTextInputEditText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:alpha">1</item>
