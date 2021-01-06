@@ -27,7 +27,7 @@ public abstract class BaseDialog extends DialogFragment {
     protected double canvasWidth = 0.9;
     protected boolean isFullScreen = false;
 
-    protected int animationStyle = R.style.DialogStyle_Slide;
+    protected int animationStyle = R.style.LibSearchViewDialog_DialogStyle_Slide;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
