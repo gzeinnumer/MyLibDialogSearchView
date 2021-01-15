@@ -338,7 +338,7 @@ public class MainActivity extends AppCompatActivity {
         listObject.add(new ExampleModel(4, "Zein4", "Balbar4"));
 
         new SearchViewDialog<ExampleModel>(getSupportFragmentManager())
-                .setAnimationStyle(R.style.LibSearchViewDialog_DialogStyle_In)
+                .setAnimationStyle(R.style.DialogStyle_In)
                 .setItems(listObject)
                 .setTitle("ini title")
                 .setContent("ini content")

@@ -7,7 +7,7 @@
 
     <CheckedTextView
         android:id="@+id/checked_text_item"
-        style="@style/LibSearchViewDialog_MyTextContent"
+        style="@style/MyTextContent"
         android:layout_width="match_parent"
         android:checkMark="?android:attr/listChoiceIndicatorSingle"
         android:checkMarkTint="@color/colorPrimary"
@@ -19,7 +19,7 @@
 
     <View
         android:id="@+id/divider"
-        style="@style/LibSearchViewDialog_MyDivider"
+        style="@style/MyDivider"
         android:layout_marginTop="0dp" />
 
 </LinearLayout>
