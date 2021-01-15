@@ -19,7 +19,7 @@
 
         <TextView
             android:id="@+id/tv_title"
-            style="@style/LibSearchViewDialog_MyTextHeader"
+            style="@style/MyTextHeader"
             android:layout_width="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
@@ -28,7 +28,7 @@
 
         <TextView
             android:id="@+id/tv_content"
-            style="@style/LibSearchViewDialog_MyTextContent"
+            style="@style/MyTextContent"
             android:layout_width="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="@dimen/text_margin"
@@ -36,7 +36,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/parent_ed_search"
-            style="@style/LibSearchViewDialog_MyTextInputLayoutOutlinedBox"
+            style="@style/MyTextInputLayoutOutlinedBox"
             android:layout_width="match_parent"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
@@ -45,7 +45,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ed_search"
-                style="@style/LibSearchViewDialog_MyTextInputEditText" />
+                style="@style/MyTextInputEditText" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,7 +67,7 @@
 
             <Button
                 android:id="@+id/d_btn_cancel_MBT"
-                style="@style/LibSearchViewDialog_MyButtonText"
+                style="@style/MyButtonText"
                 android:layout_marginEnd="@dimen/def_margin"
                 android:text="@string/cancel"
                 android:visibility="gone"
@@ -75,34 +75,34 @@
 
             <Button
                 android:id="@+id/d_btn_ok_MBT"
-                style="@style/LibSearchViewDialog_MyButtonText"
+                style="@style/MyButtonText"
                 android:text="@string/ok"
                 android:visibility="gone"
                 tools:visibility="visible" />
 
             <Button
                 android:id="@+id/d_btn_cancel_MBO"
-                style="@style/LibSearchViewDialog_MyButtonOutlined"
+                style="@style/MyButtonOutlined"
                 android:layout_marginEnd="@dimen/def_margin"
                 android:text="@string/cancel"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/d_btn_ok_MBO"
-                style="@style/LibSearchViewDialog_MyButtonOutlined"
+                style="@style/MyButtonOutlined"
                 android:text="@string/ok"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/d_btn_cancel_MBC"
-                style="@style/LibSearchViewDialog_MyButtonContained"
+                style="@style/MyButtonContained"
                 android:layout_marginEnd="@dimen/def_margin"
                 android:text="@string/cancel"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/d_btn_ok_MBC"
-                style="@style/LibSearchViewDialog_MyButtonContained"
+                style="@style/MyButtonContained"
                 android:text="@string/ok"
                 android:visibility="gone" />
 
