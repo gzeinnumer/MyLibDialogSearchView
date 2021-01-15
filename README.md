@@ -6,7 +6,7 @@
 </h1>
 
 <div align="center">
-    <a><img src="https://img.shields.io/badge/Version-2.0.4-brightgreen.svg?style=flat"></a>
+    <a><img src="https://img.shields.io/badge/Version-2.0.5-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
     <a><img src="https://img.shields.io/badge/Koltin-Suport-green?logo=kotlin&style=flat"></a>
@@ -32,7 +32,8 @@ allprojects {
 dependencies {
   ...
   implementation 'com.github.gzeinnumer:MyLibDialogSearchView:version'
-  implementation 'com.google.android.material:material:1.2.0'
+  implementation 'com.github.gzeinnumer:MyLibStyle:0.1.3'
+  implementation 'com.google.android.material:material:1.2.1'
 }
 ```
 
@@ -263,6 +264,8 @@ You can Customize your dialog UI. [**ReadMore**](https://github.com/gzeinnumer/M
   - First Release
 - **2.0.4**
   - Add animation and set custom animation show
+- **2.0.5**
+  - Bug Fixing
 
 ---
 
