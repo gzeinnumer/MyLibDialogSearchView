@@ -265,7 +265,7 @@ You can Customize your dialog UI. [**ReadMore**](https://github.com/gzeinnumer/M
 - **2.0.4**
   - Add animation and set custom animation show
 - **2.0.5**
-  - Bug Style
+  - Bug Fixing
 - **2.0.6**
   - Color
 - **2.0.7**
