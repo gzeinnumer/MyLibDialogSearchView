@@ -32,7 +32,7 @@ allprojects {
 dependencies {
   ...
   implementation 'com.github.gzeinnumer:MyLibDialogSearchView:version'
-  implementation 'com.github.gzeinnumer:MyLibStyle:0.1.3'
+  implementation 'com.github.gzeinnumer:MyLibStyle:0.1.5'
   implementation 'com.google.android.material:material:1.2.1'
 }
 ```
