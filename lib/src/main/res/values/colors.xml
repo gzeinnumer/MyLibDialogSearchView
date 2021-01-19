@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">?attr/colorPrimary</color>
-    <color name="colorPrimaryDark">?attr/colorPrimaryDark</color>
-    <color name="colorAccent">?attr/colorAccent</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
     <color name="divider">#DCDCDC</color>
     <color name="grey_dark">#A9A9A9</color>
 
-<!--    dialog custom -->
+    <!--    dialog custom -->
     <color name="text_header">#FF282828</color>
     <color name="text_content">#FF1C1C1C</color>
     <dimen name="text_margin">10dp</dimen>
-
 
 
     <color name="overlay_dark_10">#1A000000</color>
