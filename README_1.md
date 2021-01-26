@@ -97,8 +97,7 @@ You can change UI with this configuration.
       - `Gravity.START`
       - etc.
 - Change Button Background Color
-  - `.setButtonColor(R.color.amber_200)` you can use this only if you use `.setButtonStyle(ButtonStyle.ButtonContained)`
-
+  - `.setButtonColor(getResources().getColor(R.color.colorPrimary))` or `.setButtonColor(Color.parseColor("#03DAC5"))` you can use this only if you use .setButtonStyle(ButtonStyle.ButtonContained)
 ##
 
 **Look At Orange Arrow.** you can set shape/canvas from `drawable` to `dialog` with `shape.xml`->`<shape></shape>`. in my example i am using `rounded_corner_2.xml`.

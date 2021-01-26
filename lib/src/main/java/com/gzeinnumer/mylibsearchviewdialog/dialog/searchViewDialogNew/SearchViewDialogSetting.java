@@ -216,13 +216,13 @@ public class SearchViewDialogSetting<T> extends BaseDialog implements MyHolderSi
         }
 
         if (buttonColor!=0 && btnStyle == ButtonStyle.ButtonContained){
-            _dBtnCancelMBC.setBackgroundColor(getResources().getColor(buttonColor));
-            _dBtnOkMBC.setBackgroundColor(getResources().getColor(buttonColor));
+            _dBtnCancelMBC.setBackgroundColor(buttonColor);
+            _dBtnOkMBC.setBackgroundColor(buttonColor);
         }
 
         if (listFromUser.size()>0){
             for (int i = 0; i<listFromUser.size(); i++){
-                list.add((T) listFromUser.get(i));
+                list.add(listFromUser.get(i));
             }
             _adapter = new RvItemAdapter<T>(type, this, list);
 
